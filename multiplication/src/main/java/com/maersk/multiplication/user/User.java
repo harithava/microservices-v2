@@ -1,18 +1,26 @@
 package com.maersk.multiplication.user;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
+
 
 /**
  * Stores information to identify the user
  */
-@Getter
-@ToString
-@EqualsAndHashCode
+
+@Entity
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class User {
+    @Id
+    @Generated
     private Long id;
     private String alias;
+
+    public User(final String alias) {
+        this(null, alias);
+    }
 }
