@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.maersk.multiplication.challenge.ChallengeGeneratorServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-26T08:05:06" hostname="MMDHD61Y6CQFF" time="0.559">
+  <properties/>
+  <testcase name="randomChallenge()" classname="com.maersk.multiplication.challenge.ChallengeGeneratorServiceImplTest" time="0.559"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
