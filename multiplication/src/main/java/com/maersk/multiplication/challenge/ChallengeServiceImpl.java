@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -39,5 +41,10 @@ public class ChallengeServiceImpl implements ChallengeService {
         ChallengeAttempt storedAttempt = challengeAttemptRepository.save(challengeAttempt);
 
         return challengeAttempt;
+    }
+
+    @Override
+    public List<ChallengeAttempt> getStatsForUser(String alias) {
+        return challengeAttemptRepository.findTop10ByUserAliasOrderByIdDesc(alias);
     }
 }

@@ -1,8 +1,7 @@
 package com.maersk.multiplication.user;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 
@@ -16,7 +15,8 @@ import lombok.*;
 @NoArgsConstructor
 public class User {
     @Id
-    @Generated
+    @Column(name = "id")
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String alias;
 
